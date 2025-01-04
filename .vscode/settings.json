@@ -1,0 +1,11 @@
+{
+    "[swift]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "sweetpad.sweetpad"
+    },
+    "sweetpad.format.path": "swift-format",
+    "sweetpad.format.args": [
+        "${file}",
+        "--in-place"
+    ]
+}
