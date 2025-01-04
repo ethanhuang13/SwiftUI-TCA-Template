@@ -1,14 +1,20 @@
-import XCTest
 import ComposableArchitecture
 import Features
+import XCTest
 
 @MainActor
 final class HomeFeatureTests: XCTestCase {
   func testTask() async throws {
-    let store = TestStore(initialState: HomeFeature.State()) {
-      HomeFeature()
+    let store = TestStore(
+      initialState: HomeFeature.State(),
+      reducer: { HomeFeature() }
+    ) {
+      $0.apiClient.fetchNumber = { 13 }
     }
-    
-    await store.send(.task)
+
+    await store.send(\.task)
+    await store.receive(\.binding.number) {
+      $0.number = 13
+    }
   }
-} 
+}
