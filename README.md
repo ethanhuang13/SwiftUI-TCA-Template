@@ -1,5 +1,7 @@
 # SwiftUI + TCA Template
 
+[English](#swiftui--tca-template) | [繁體中文](#swiftui--tca-專案模板)
+
 A template project for building iOS/macOS apps with SwiftUI and The Composable Architecture (TCA), featuring a modular package structure for better maintainability and scalability.
 
 ## Features
@@ -97,6 +99,8 @@ PublicApp --> iOS
 ---
 
 # SwiftUI + TCA 專案模板
+
+[English](#swiftui--tca-template) | [繁體中文](#swiftui--tca-專案模板)
 
 這是一個用於建立 iOS/macOS 應用程式的專案模板，使用 SwiftUI 和 The Composable Architecture (TCA)，具有模組化的套件結構，提供更好的可維護性和擴充性。
 
