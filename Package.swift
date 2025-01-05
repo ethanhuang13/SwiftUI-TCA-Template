@@ -27,7 +27,7 @@ let dependenciesMacros = SourceControlDependency(
   productName: "DependenciesMacros"
 )
 
-// MARK: - Modules. Orderd by dependency hierarchy.
+// MARK: - Modules. Ordered by dependency hierarchy.
 
 let models = SingleTargetLibrary(
   name: "Models",
