@@ -118,12 +118,23 @@ struct SourceControlDependency {
   }
 
   var targetDependency: Target.Dependency {
-    guard case let .sourceControl(name: packageName, location: location, _) = package.kind else {
+    var packageName: String
+
+    switch package.kind {
+    case let .fileSystem(name: name, path: path):
+      guard let name = name ?? URL(string: path)?.lastPathComponent else {
+        fatalError("No package name found. Path: \(path)")
+      }
+      packageName = name
+    case let .sourceControl(name: name, location: location, _):
+      guard let name = name ?? URL(string: location)?.lastPathComponent else {
+        fatalError("No package name found. Location: \(location)")
+      }
+      packageName = name
+    default:
       fatalError("Unsupported dependency kind: \(package.kind)")
     }
-    guard let packageName = packageName ?? URL(string: location)?.lastPathComponent else {
-      fatalError("No package name found. Location: \(location)")
-    }
+
     return .product(name: productName, package: packageName, moduleAliases: nil, condition: nil)
   }
 }
