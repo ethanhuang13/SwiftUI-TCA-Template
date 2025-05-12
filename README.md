@@ -88,12 +88,12 @@ PublicApp --> iOS
 
 ## Dependencies
 
-- [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture) - v1.17.0
+- [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture)
 
 ## Requirements
 
 - iOS 17.0+ / macOS 14.0+
-- Xcode 15.0+
+- Xcode 16.0+
 - Swift 6.0+
 
 ---
@@ -188,10 +188,10 @@ PublicApp --> iOS
 
 ## 相依套件
 
-- [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture) - v1.17.0
+- [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture)
 
 ## 系統需求
 
 - iOS 17.0+ / macOS 14.0+
-- Xcode 15.0+
+- Xcode 16.0+
 - Swift 6.0+

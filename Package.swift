@@ -10,13 +10,13 @@ let appName = "App"
 let tca = SourceControlDependency(
   package: .package(
     url: "https://github.com/pointfreeco/swift-composable-architecture",
-    exact: "1.18.0"
+    exact: "1.19.1"
   ),
   productName: "ComposableArchitecture"
 )
 let swiftDependencies = Package.Dependency.package(
   url: "https://github.com/pointfreeco/swift-dependencies",
-  from: "1.8.1"
+  from: "1.9.2"
 )
 let dependencies = SourceControlDependency(
   package: swiftDependencies,
