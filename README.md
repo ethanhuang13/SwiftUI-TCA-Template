@@ -14,7 +14,7 @@ A template project for building iOS/macOS apps with SwiftUI and The Composable A
 
 ## Credit
 
-This template is created by [13](https://github.com/ethanhuang13), who runs iOS Developer+ - a premium Traditional Chinese membership providing advanced and exclusive iOS development content. You can become a member at [iosdeveloper.plus](https://iosdeveloper.plus) and [preview the benefits](https://ethanhuang13.notion.site/ios-developer-plus-benefits).
+This template is created by [13](https://github.com/ethanhuang13), who runs 13+ - a premium Traditional Chinese membership providing advanced and exclusive iOS development content. You can become a member at [Patreon](https://patreon.com/ethanhuang13) and [preview the benefits](https://ethanhuang13.plus).
 
 ## Project Structure
 
@@ -114,7 +114,7 @@ PublicApp --> iOS
 
 ## 作者
 
-此模板由 [13](https://github.com/ethanhuang13) 建立。13 經營 iOS Developer+ 繁體中文付費會員，提供進階、獨家的 iOS 開發內容。你可以在 [iosdeveloper.plus](https://iosdeveloper.plus) 訂閱，並在[這裡](https://ethanhuang13.notion.site/ios-developer-plus-benefits)預覽會員內容。
+此模板由 [13](https://github.com/ethanhuang13) 建立。13 經營 13+ 繁體中文付費會員，提供進階、獨家的 iOS 開發內容。你可以在 [Patreon](https://patreon.com/ethanhuang13) 訂閱，並在[官網](https://ethanhuang13.plus)預覽會員內容。
 
 ## 專案結構
 
