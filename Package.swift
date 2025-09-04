@@ -26,6 +26,13 @@ let dependenciesMacros = SourceControlDependency(
   package: swiftDependencies,
   productName: "DependenciesMacros"
 )
+let customDump = SourceControlDependency(
+  package: .package(
+    url: "https://github.com/pointfreeco/swift-custom-dump",
+    exact: "1.3.3"
+  ),
+  productName: "CustomDump"
+)
 
 // MARK: - Modules. Ordered by dependency hierarchy.
 
@@ -93,6 +100,7 @@ let package = Package(
   dependencies: [
     tca.package,
     swiftDependencies,
+    customDump.package
   ],
   targets: [
     dependencyClients.target,
@@ -100,8 +108,10 @@ let package = Package(
     features.target,
     features.testTarget,
     models.target,
+    models.testTarget,
     publicApp.target,
     views.target,
+    views.testTarget
   ]
 )
 
@@ -140,6 +150,7 @@ struct SourceControlDependency {
 }
 
 /// Local modules.
+@MainActor
 struct SingleTargetLibrary {
   var name: String
   var dependencies: [Target.Dependency] = []
@@ -157,6 +168,7 @@ struct SingleTargetLibrary {
   }
 
   var testTarget: Target {
-    .testTarget(name: name + "Tests", dependencies: [targetDependency])
+    .testTarget(
+      name: name + "Tests", dependencies: [targetDependency, customDump.targetDependency])
   }
 }

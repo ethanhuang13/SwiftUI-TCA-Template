@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Features"
-               BuildableName = "Features"
-               BlueprintName = "Features"
-               ReferencedContainer = "container:">
+               BlueprintIdentifier = "6C8CDCC52E69D7BF0080AE37"
+               BuildableName = "Name.app"
+               BlueprintName = "Name"
+               ReferencedContainer = "container:Name.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,7 +30,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tests/Features.xctestplan"
+            reference = "container:Name/Name.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -45,6 +45,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6C8CDCC52E69D7BF0080AE37"
+            BuildableName = "Name.app"
+            BlueprintName = "Name"
+            ReferencedContainer = "container:Name.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -52,15 +62,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Features"
-            BuildableName = "Features"
-            BlueprintName = "Features"
-            ReferencedContainer = "container:">
+            BlueprintIdentifier = "6C8CDCC52E69D7BF0080AE37"
+            BuildableName = "Name.app"
+            BlueprintName = "Name"
+            ReferencedContainer = "container:Name.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

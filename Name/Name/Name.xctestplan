@@ -1,29 +1,36 @@
 {
   "configurations" : [
     {
-      "id" : "788784F1-A40A-4CB2-8AB5-A9D7FBC6D86D",
-      "name" : "Test Scheme Action",
+      "id" : "6790F001-09E7-4407-8707-98E887BCBCE4",
+      "name" : "Configuration 1",
       "options" : {
 
       }
     }
   ],
   "defaultOptions" : {
-
+    "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:",
+        "containerPath" : "container:..",
         "identifier" : "ModelsTests",
         "name" : "ModelsTests"
       }
     },
     {
       "target" : {
-        "containerPath" : "container:",
+        "containerPath" : "container:..",
         "identifier" : "FeaturesTests",
         "name" : "FeaturesTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "ViewsTests",
+        "name" : "ViewsTests"
       }
     }
   ],
