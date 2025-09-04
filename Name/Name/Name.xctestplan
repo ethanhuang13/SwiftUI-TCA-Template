@@ -15,8 +15,8 @@
     {
       "target" : {
         "containerPath" : "container:..",
-        "identifier" : "ModelsTests",
-        "name" : "ModelsTests"
+        "identifier" : "ViewsTests",
+        "name" : "ViewsTests"
       }
     },
     {
@@ -28,9 +28,9 @@
     },
     {
       "target" : {
-        "containerPath" : "container:",
-        "identifier" : "ViewsTests",
-        "name" : "ViewsTests"
+        "containerPath" : "container:..",
+        "identifier" : "ModelsTests",
+        "name" : "ModelsTests"
       }
     }
   ],

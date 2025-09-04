@@ -85,6 +85,7 @@ let publicApp = SingleTargetLibrary(
 
 let package = Package(
   name: appName + "Package",  // To avoid target name collision when importing to Xcode project
+  defaultLocalization: "en",
   platforms: [
     .iOS(.v17),
     .macOS(.v14),
@@ -100,7 +101,7 @@ let package = Package(
   dependencies: [
     tca.package,
     swiftDependencies,
-    customDump.package
+    customDump.package,
   ],
   targets: [
     dependencyClients.target,
@@ -111,7 +112,7 @@ let package = Package(
     models.testTarget,
     publicApp.target,
     views.target,
-    views.testTarget
+    views.testTarget,
   ]
 )
 

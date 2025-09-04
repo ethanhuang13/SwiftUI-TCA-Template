@@ -1,0 +1,18 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "_Key" : {
+      "comment" : "Placeholder for this Localizable.xcstrings",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "_Key"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
