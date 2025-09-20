@@ -1,4 +1,4 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 6.2
 
 import Foundation
 import PackageDescription
@@ -10,13 +10,13 @@ let appName = "App"
 let tca = SourceControlDependency(
   package: .package(
     url: "https://github.com/pointfreeco/swift-composable-architecture",
-    exact: "1.22.2"
+    exact: "1.22.3"
   ),
   productName: "ComposableArchitecture"
 )
 let swiftDependencies = Package.Dependency.package(
   url: "https://github.com/pointfreeco/swift-dependencies",
-  from: "1.9.4"
+  from: "1.9.5"
 )
 let dependencies = SourceControlDependency(
   package: swiftDependencies,
@@ -38,7 +38,9 @@ let customDump = SourceControlDependency(
 
 let models = SingleTargetLibrary(
   name: "Models",
-  dependencies: []
+  dependencies: [
+    dependencies.targetDependency
+  ]
 )
 let dependencyClients = SingleTargetLibrary(
   name: "DependencyClients",
