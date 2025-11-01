@@ -10,13 +10,13 @@ let appName = "App"
 let tca = SourceControlDependency(
   package: .package(
     url: "https://github.com/pointfreeco/swift-composable-architecture",
-    exact: "1.22.3"
+    exact: "1.23.1"
   ),
   productName: "ComposableArchitecture"
 )
 let swiftDependencies = Package.Dependency.package(
   url: "https://github.com/pointfreeco/swift-dependencies",
-  from: "1.9.5"
+  from: "1.10.0"
 )
 let dependencies = SourceControlDependency(
   package: swiftDependencies,
@@ -134,12 +134,12 @@ struct SourceControlDependency {
     var packageName: String
 
     switch package.kind {
-    case let .fileSystem(name: name, path: path):
+    case .fileSystem(let name, let path):
       guard let name = name ?? URL(string: path)?.lastPathComponent else {
         fatalError("No package name found. Path: \(path)")
       }
       packageName = name
-    case let .sourceControl(name: name, location: location, _):
+    case .sourceControl(let name, let location, _):
       guard let name = name ?? URL(string: location)?.lastPathComponent else {
         fatalError("No package name found. Location: \(location)")
       }
@@ -148,7 +148,12 @@ struct SourceControlDependency {
       fatalError("Unsupported dependency kind: \(package.kind)")
     }
 
-    return .product(name: productName, package: packageName, moduleAliases: nil, condition: nil)
+    return .product(
+      name: productName,
+      package: packageName,
+      moduleAliases: nil,
+      condition: nil
+    )
   }
 }
 
@@ -172,6 +177,8 @@ struct SingleTargetLibrary {
 
   var testTarget: Target {
     .testTarget(
-      name: name + "Tests", dependencies: [targetDependency, customDump.targetDependency])
+      name: name + "Tests",
+      dependencies: [targetDependency, customDump.targetDependency]
+    )
   }
 }
