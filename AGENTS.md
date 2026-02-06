@@ -66,3 +66,4 @@ xcodebuild -list -project "Xcode/${NEW_NAME}.xcodeproj"
 ## Notes
 - If `PRODUCT_BUNDLE_IDENTIFIER` should also change, edit `Xcode/${NEW_NAME}.xcodeproj/project.pbxproj` accordingly (default template uses `com.yourcompany.<AppName>`).
 - Do not modify `Xcode/<App>.xcworkspace` to remove the repo-root `FileRef`; doing so hides Swift Package schemes from the workspace.
+- This project uses TCA. If you have a Point-Free subscription and are signed in to use the `pfw` skill, you may use it for development in this project.
