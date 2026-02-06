@@ -12,6 +12,14 @@
 - `Xcode/<App>.xcodeproj/project.xcworkspace/contents.xcworkspacedata` must exist and contain a `self:` `FileRef`.
 - If this file is missing, Xcode GUI may treat `.xcodeproj` like a plain folder/file instead of a project.
 
+## Swift Macros Requirement
+- This project uses Swift Macros (for example via TCA-related dependencies).
+- Without enabling macro fingerprint skip in Xcode, builds may fail during macro validation.
+- Run this once on the machine before building in Xcode:
+```bash
+defaults write com.apple.dt.Xcode IDESkipMacroFingerprintValidation -bool YES
+```
+
 ## Template Rename Workflow
 - Goal: replace the template placeholder `Name` with a concrete app name (for example `AcmeApp`) safely and consistently.
 - Do all steps before regular feature work.
