@@ -3,15 +3,6 @@
 ## Scope
 - This file applies to this repository and overrides global defaults when they conflict.
 
-## Workspace Behavior (Important)
-- `Xcode/Name.xcworkspace` intentionally references the repo root (`group:../`) so Swift Package schemes are loaded.
-- Because of that, Xcode Navigator shows `Name.xcodeproj` twice:
-- One is a folder-like item under the repo tree.
-- One is the real Xcode project container.
-- This is expected behavior, not project corruption.
-- `Xcode/<App>.xcodeproj/project.xcworkspace/contents.xcworkspacedata` must exist and contain a `self:` `FileRef`.
-- If this file is missing, Xcode GUI may treat `.xcodeproj` like a plain folder/file instead of a project.
-
 ## Swift Macros Requirement
 - This project uses Swift Macros (for example via TCA-related dependencies).
 - Without enabling macro fingerprint skip in Xcode, builds may fail during macro validation.
