@@ -64,6 +64,9 @@ let views = SingleTargetLibrary(
     tca.targetDependency,
     models.targetDependency,
     features.targetDependency,
+  ],
+  resources: [
+    .process("Resources")
   ]
 )
 let dependencyClientsLive = SingleTargetLibrary(
@@ -162,13 +165,14 @@ struct SourceControlDependency {
 struct SingleTargetLibrary {
   var name: String
   var dependencies: [Target.Dependency] = []
+  var resources: [Resource] = []
 
   var product: Product {
     .library(name: name, targets: [name])
   }
 
   var target: Target {
-    .target(name: name, dependencies: dependencies)
+    .target(name: name, dependencies: dependencies, resources: resources)
   }
 
   var targetDependency: Target.Dependency {

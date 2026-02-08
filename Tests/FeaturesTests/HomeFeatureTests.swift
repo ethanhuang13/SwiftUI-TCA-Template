@@ -1,10 +1,12 @@
 import ComposableArchitecture
 import Features
-import XCTest
+import Testing
 
 @MainActor
-final class HomeFeatureTests: XCTestCase {
-  func testTask() async throws {
+@Suite("HomeFeatureTests")
+struct HomeFeatureTests {
+  @Test("Test task fetches number")
+  func testTask() async {
     let store = TestStore(
       initialState: HomeFeature.State(),
       reducer: { HomeFeature() }
